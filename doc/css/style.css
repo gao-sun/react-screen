@@ -1,0 +1,555 @@
+/* Webfont: Lato-Light */@font-face {
+	font-family: 'LatoWebLight';
+	src: url('../font/Lato-Light.eot'); /* IE9 Compat Modes */
+	src: url('../font/Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../font/Lato-Light.woff2') format('woff2'), /* Modern Browsers */
+		 url('../font/Lato-Light.woff') format('woff'), /* Modern Browsers */
+		 url('../font/Lato-Light.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Regular */@font-face {
+	font-family: 'LatoWeb';
+	src: url('../font/Lato-Regular.eot'); /* IE9 Compat Modes */
+	src: url('../font/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../font/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+		 url('../font/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+		 url('../font/Lato-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', 'LatoWebLight', 'Myriad Pro', 'Helvetica';
+	font-weight: 300;
+	font-size: 12px;
+	color: #333;
+}
+
+.font-light {
+	font-family: 'Lato', 'LatoWebLight', 'Myriad Pro', 'Helvetica';
+	font-weight: 300;
+}
+
+.font-regular {
+	font-family: 'Lato', 'LatoWeb', 'Myriad Pro', 'Helvetica';
+	font-weight: 400;
+}
+
+.block {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1000px;
+	font-size: 1.3rem;
+}
+
+
+/* Repo */
+
+.repo {
+	position: relative;
+	padding: 0;
+	text-align: center;
+	min-height: 100vh;
+	background: #fafafa;
+}
+
+.repo .title {
+	font-size: 4rem;
+	padding: 20vh 0;
+	background-color: #1d1d1d;
+	color: #2852fd;
+}
+
+.repo .subtitle {
+	padding: 1.2rem;
+	font-size: 1.3rem;
+	color: #c5c5c5;
+}
+
+.repo .intro {
+	padding: 6rem 0;
+}
+
+.repo .button-group .button {
+	display: inline-block;
+	width: 120px;
+	font-size: 1.2rem;
+	padding: .6rem 0;
+	color: #333;
+	background-color: #eee;
+	border-radius: 3px;
+	text-decoration: none;
+	transition: all ease .2s;
+}
+
+.repo .button-group .button:hover {
+	cursor: pointer;
+	background-color: #ccc;
+}
+
+.repo .block .item {
+	font-size: 1.8rem;
+	padding: 1.3rem;
+	color: #555;
+}
+
+/* Document */
+
+.document {
+	min-height: 100vh;
+	background: #fafafa;
+	padding: 2rem 0;
+}
+
+.document .bigtitle {
+	padding: 1rem 0;
+	font-size: 3rem;
+}
+
+.document .title {
+	padding: 1rem 0;
+	font-size: 2rem;
+	color: rgb(7,120,215);
+}
+
+.document .text {
+	padding: 1rem 0;
+	font-size: 1.5rem;
+}
+
+/* Screen */
+
+.screen {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	perspective: 150vw;
+}
+
+.screen > .title {
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	font-size: 3rem;
+	color: #333;
+}
+
+.screen > .text {
+	position: absolute;
+	left: 10%;
+	top: calc(10% + 4rem);
+	font-size: 1.5rem;
+	color: #888;
+}
+
+/* Screen 1 */
+
+.screen-1-base,
+.screen-2-base {
+	position: absolute;
+	width: 60%;
+	height: 50%;
+	left: 50%;
+	top: 50%;
+	background: #ddd;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 5px 5px 5px rgba(233,233,233,.8);
+}
+
+.screen-1-base {
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.screen-1-base .block {
+	position: absolute;
+	height: 80%;
+	border-radius: 3px;
+}
+
+.screen-1-base .block .image {
+	position: absolute;
+	width: 20%;
+	height: 20%;
+	left: 30%;
+	top: 50%;
+
+	transform: translateX(-50%) translateY(-50%);
+	background-image: url(../image/screen.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.screen-1-base .block .text {
+	position: absolute;
+	width: 35%;
+	height: 20%;
+	left: 65%;
+	top: 55%;
+	font-size: 2vw;
+	color: rgba(0,57,179,1);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.screen-1-base .block.block-1 {
+	background: rgba(79, 127, 232, .9);
+	top: 10%;
+	left: 10%;
+	width: 50%;
+}
+
+.screen-1-base .block.block-2 {
+	background: rgba(151,183,242,.9);
+	top: 10%;
+	left: 65%;
+	width: 25%;
+}
+
+.screen-1-base .block.block-3 {
+	background: #f5f5f5;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scaleX(0.8) scaleY(0.8);
+	overflow: hidden;
+}
+
+.react-screen.in .screen-1-base .block.block-1,
+.react-screen.in .screen-1-base .block.block-2 {
+	animation-delay: .3s;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-name: ReactScreen-1-Scroll;
+}
+
+.react-screen.in .screen-1-base .block.block-3 {
+	animation-delay: .3s, 1.3s;
+	animation-duration: 1s, .8s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-name: ReactScreen-1-Screen-Scroll, ReactScreen-1-Resize;
+}
+
+.react-screen.out .screen-1-base .block.block-1,
+.react-screen.out .screen-1-base .block.block-2 {
+	animation: none;
+	transform: translateY(-113%);
+}
+
+.react-screen.out .screen-1-base .block.block-3 {
+	animation: none;
+	transform: translateY(-100%) scaleX(1) scaleY(1);
+}
+
+@keyframes ReactScreen-1-Scroll {
+	to {
+		transform: translateY(-113%);
+	}
+}
+
+@keyframes ReactScreen-1-Screen-Scroll {
+	from {
+		transform: scaleX(0.8) scaleY(0.8);
+	}
+	to {
+		transform: translateY(-100%) scaleX(0.8) scaleY(0.8);;
+	}
+}
+
+@keyframes ReactScreen-1-Resize {
+	from {
+		transform: translateY(-100%) scaleX(0.8) scaleY(0.8);
+	}
+	to {
+		transform: translateY(-100%) scaleX(1) scaleY(1);
+	}
+}
+
+/* Screen 2 */
+.screen-2-base {
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.screen-2-base .image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateY(100%);
+
+	background-image: url(../image/sierra.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.screen-2-base .text {
+	position: absolute;
+	top: 15%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 3vw;
+	font-family: 'Lato', 'LatoWeb';
+	font-weight: 400;
+	opacity: 0;
+}
+
+.screen-2-base .button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 70px;
+	font-size: 1vw;
+	padding: .3vw 1.3vw;
+	border-radius: 3px;
+	background: rgba(39, 87, 232, .9);
+	text-align: center;
+	color: white;
+	opacity: 0;
+}
+
+.react-screen.in .screen-2-base .image {
+	animation-delay: .2s;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-name: ReactScreen-2-Image;
+}
+
+.react-screen.in .screen-2-base .text {
+	animation-delay: 1.2s;
+	animation-duration: .6s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-name: ReactScreen-2-Text;
+}
+
+.react-screen.in .screen-2-base .button {
+	animation-delay: 1.8s;
+	animation-duration: .6s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-name: ReactScreen-2-Button;
+}
+
+.react-screen.out .screen-2-base .image,
+.react-screen.out .screen-2-base .text,
+.react-screen.out .screen-2-base .button {
+	animation: none;
+}
+
+.react-screen.out .screen-2-base .image {
+	transform: none;
+}
+
+.react-screen.out .screen-2-base .text {
+	opacity: 1;
+	transform: none;
+}
+
+.react-screen.out .screen-2-base .button {
+	opacity: 1;
+	transform: translateX(-50%) translateY(-100%);
+}
+
+@keyframes ReactScreen-2-Image {
+	from {
+		transform: translateY(100%);
+	}
+
+	to {
+		transform: none;
+	}
+} 
+
+@keyframes ReactScreen-2-Text {
+	from {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes ReactScreen-2-Button {
+	from {
+		opacity: 0;
+		transform: translateX(-50%) translateY(0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(-50%) translateY(-100%);
+	}
+}
+
+/* Screen 3 */
+
+.rec {
+	/*transform: translateX(-50%) translateY(-50%);*/
+	transform: translateX(-50%) translateY(-50%) rotateX(60deg) rotateZ(50deg);
+
+	border-radius: 3px;
+}
+
+.rec-base-1 {
+	position: absolute;
+	width: 40%;
+	height: 40%;
+	left: 50%;
+	top: 50%;
+	background: rgba(0, 57, 179, .9);
+	box-shadow: 10px 10px 5px rgba(233,233,233,.8);
+}
+
+.rec-base-2 {
+	position: absolute;
+	width: 40%;
+	height: 40%;
+	left: 50%;
+	top: 45%;
+	opacity: 0;
+}
+
+.rec-base-3 {
+	position: absolute;
+	width: 40%;
+	height: 40%;
+	left: 50%;
+	top: 40%;
+	opacity: 0;
+}
+
+.rec-block-1 {
+	position: absolute;
+	width: 85%;
+	height: 100%;
+	left: 1%;
+	top: 1%;
+	background: rgba(79, 127, 232, .9);
+	border-radius: 3px;
+}
+
+.rec-block-2 {
+	position: absolute;
+	width: 12%;
+	height: 100%;
+	left: 87%;
+	top: 1%;
+	background: rgba(104,146,237,.9);
+	border-radius: 3px;
+}
+
+.rec-block-3 {
+	position: absolute;
+	width: 30%;
+	height: 50%;
+	left: 2%;
+	top: 1%;
+	background: rgba(151,183,242,.9);
+	border-radius: 3px;
+}
+
+.rec-block-4 {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	left: 33%;
+	top: 1%;
+	background: rgba(190,208,247,.9);
+	border-radius: 3px;
+}
+
+.react-screen.in .rec {
+	animation-duration: .7s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+.react-screen.in .rec-base-1 {
+	animation-name: ReactScreenFlyInBase;
+}
+
+.react-screen.in .rec-base-2 {
+	animation-name: ReactScreenFlyInElements;
+	animation-delay: .2s;
+}
+
+.react-screen.in .rec-base-3 {
+	animation-name: ReactScreenFlyInElements2;
+	animation-delay: .4s;
+}
+
+.react-screen.out .rec {
+	animation: none;
+	opacity: 1;
+}
+
+.react-screen.in .rec-base-1 {
+	top: 50%;	
+}
+
+.react-screen.in .rec-base-2 {
+	top: 45%;
+}
+
+.react-screen.in .rec-base-3 {
+	top: 40%;
+}
+
+@keyframes ReactScreenFlyInBase {
+	from {
+		top: 65%;
+		opacity: .2;
+	}
+
+	to {
+		top: 50%;
+		opacity: 1;
+	}
+}
+
+@keyframes ReactScreenFlyInElements {
+	from {
+		top: 55%;
+		opacity: 0;
+	}
+
+	to {
+		top: 45%;
+		opacity: 1;
+	}
+}
+
+@keyframes ReactScreenFlyInElements2 {
+	from {
+		top: 50%;
+		opacity: 0;
+	}
+
+	to {
+		top: 40%;
+		opacity: 1;
+	}
+}

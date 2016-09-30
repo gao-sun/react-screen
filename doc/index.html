@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>React Screen</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../dist/css/react-screen.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+	<div class="repo">
+		<div class="title font-regular">
+			React Screen
+			<div class="subtitle font-light">A different React carousel component.</div>
+			<div class="button-group">
+				<a href="#document" class="button">Document</a>
+				<a href="https://github.com/gao-sun/react-screen" target="_blank" class="button">Github</a>
+			</div>
+		</div>
+		<div class="intro">
+			<div class="block">
+				<div class="item">Too many boring carousel?</div>
+				<div class="item">Need a fancy way to show banners?</div>
+				<div class="item">JUST SCROLL DOWN</div>
+			</div>
+		</div>
+	</div>
+	<div id="react-screen"></div>
+	<div id="document" class="document">
+		<div class="block">
+			<div class="bigtitle font-regular">Document</div>
+			<div class="title font-regular">Get Started</div>
+			<div class="text">1. Install react-screen.</div>
+<pre><code class="bash"># Via npm
+npm install react-screen
+
+# Via Bower
+bower install react-screen</code></pre>
+			<div class="text">2. Import react &amp; react-screen.</div>
+<pre><code class="javascript">import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { Screen, ScreenSlice } from 'react-screen';</code></pre>
+			<div class="text">3. Import stylesheet.</div>
+<pre><code class="javascript">// In jsx
+import styles from 'node_modules/react-screen/dist/css/react-screen.css';</code></pre>
+			<div class="text">Or</div>
+<pre><code class="html">&lt;!-- In HTML --&gt;
+&lt;link rel="stylesheet" href="path/to/css/react-screen.css"&gt;</code></pre>
+			<div class="text">4. Render it!</div>
+<pre><code class="javascript">ReactDOM.render((
+    &lt;Screen&gt;
+        &lt;ScreenSlice&gt;
+            &lt;h1&gt;First Screen&lt;/h1&gt;
+        &lt;/ScreenSlice&gt;
+        &lt;ScreenSlice&gt;
+            &lt;h1&gt;Second Screen&lt;/h1&gt;
+        &lt;/ScreenSlice&gt;
+        &lt;ScreenSlice&gt;
+            &lt;h1&gt;Third Screen&lt;/h1&gt;
+        &lt;/ScreenSlice&gt;
+    &lt;/Screen&gt;
+), document.getElementById('react-screen'));</code></pre>
+			<div class="title font-regular">Properties</div>
+<pre><code class="javascript">// Values show below are default.
+&lt;Screen style={} sliceHeight={ 60 } delay={ 500 } showSkip={ true }&gt;
+
+// Descriptions
+{
+    style: "A React style object. It will apply to every screen."
+    sliceHeight: "Unit: vh. Implies each screen's scroll height.",
+    delay: 
+    	"Unit: ms. When scroll to a new screen, it will disables scroll for a while. 
+    	Useful for playing animation.",
+    showSkip: "Boolean. Determines whether show a skip button on screen."
+}
+</code></pre>
+			<div class="title font-regular">Styling</div>
+			<div class="text">You can easily overwrite styles, just use inspect tool to check class names.</div>
+			<div class="title font-regular">Animation</div>
+			<div class="text">react-screen will add class "in" to the screen just entered in, and class "out" to other screens. So you can write your own animation like this:</div>
+<pre><code class="css">.react-screen.in .your-element-class {
+    /* In animation */
+}
+
+.react-screen.out .your-element-class {
+    /* Out animation */
+}
+</code></pre>
+			<div class="title font-regular">Issues and Contributing</div>
+			<div class="text">If you find any bugs or have any advices, please leave an <a target="_blank" href="https://github.com/gao-sun/react-screen/issues">issue</a>. Feel free to make a pull request and wait for accpetance!</div>
+		</div>
+	</div>
+</body>
+<script src="../dist/js/script.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</html/>
