@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 /**
 	Disable scroll from http://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
 **/
@@ -85,7 +84,7 @@ export class Screen extends Component {
 	handleScroll() {
 		let length = this.length;
 		let innerHeight = window.innerHeight;
-		let bodyScrollTop = document.body.scrollTop;
+		let bodyScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 		let screenTop = this.getPosition(this.refs.gap).y;
 		let screenStartTop = screenTop - 0.5 * innerHeight;
 		let screenHeight = this.refs.gap.offsetHeight;

@@ -7,6 +7,8 @@ const buffer = require('vinyl-buffer');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
+const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 const paths = {
 	jsx: 'src/jsx/*.jsx',
@@ -30,33 +32,37 @@ gulp.task('sass', ['clean'], function() {
 		cascade: false
 	}))
 	.pipe(minifyCss())
-	.pipe(gulp.dest('dist/css/'))
+	.pipe(gulp.dest('dist/'))
 });
 
-gulp.task('browserify', ['sass'], function() {
-	
-	gulp.src(paths.component)
-		.pipe(gulp.dest('dist/jsx/'));
-	
+gulp.task('generation', ['sass'], function() {
+	let babelConfig = { presets: ['es2015', 'react'], plugins: ['transform-class-properties'] };
+
 	if(!debug) {
-		return ;
+		return gulp.src(paths.component)
+			.pipe(babel(babelConfig))
+			.pipe(uglify())
+			.pipe(gulp.dest('dist/'));
 	}
 
+	gulp.src(paths.component)
+		.pipe(gulp.dest('dist/'));
+	
 	let b = browserify({
 		entries: paths.test,
 		debug: debug,
 	});
 
 	return b
-		.transform('babelify', { presets: ['es2015', 'react'], plugins: ['transform-class-properties']})
+		.transform('babelify', babelConfig)
 		.bundle()
-		.pipe(source('script.js'))
+		.pipe(source('react-screen.js'))
 		.pipe(buffer())
-		.pipe(gulp.dest('dist/js'));
+		.pipe(gulp.dest('dist/'));
 });
 
 // Whole build
-gulp.task('build', ['clean', 'sass', 'browserify']);
+gulp.task('build', ['clean', 'sass', 'generation']);
 
 gulp.task('watch', function() {
 	gulp.watch([paths.sass, paths.jsx], ['build']);
