@@ -2,6 +2,7 @@
 
 A lots of boring carousels? Let's try something else!
 
+![Demo](https://gao-sun.github.io/react-screen/image/demo.gif)
 
 Full documentation @[react-screen](http://gao-sun.github.io/reat-screen).
 
