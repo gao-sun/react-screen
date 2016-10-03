@@ -1,0 +1,14 @@
+{
+  "name": "react-screen",
+  "description": "A different React carousel component.",
+  "main": "dist/react-screen.js",
+  "authors": [
+    "Gao Sun"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "carousel",
+    "react"
+  ],
+  "homepage": "https://github.com/gao-sun/react-screen"
+}
