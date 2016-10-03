@@ -1,6 +1,6 @@
 # react-screen
 
-A lots of boring carousels? Let's try something else!
+A lot of boring carousels? Let's try something else!
 
 ![Demo](https://gao-sun.github.io/react-screen/image/demo.gif)
 
