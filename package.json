@@ -1,6 +1,6 @@
 {
   "name": "react-screen",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A different React carousel component.",
   "main": "dist/react-screen.js",
   "scripts": {
