@@ -141,6 +141,16 @@ export class Screen extends Component {
 		this.prevIndex = screenIndex;
 	}
 
+	jumpTo(index) {
+		let length = this.length;
+		let innerHeight = window.innerHeight;
+		let screenTop = this.getPosition(this.refs.gap).y;
+		let screenStartTop = screenTop - 0.5 * innerHeight;
+		let screenHeight = this.refs.gap.offsetHeight;
+
+		window.scrollTo(0, index * (screenHeight / length) + screenStartTop + 1);
+	}
+
 	// Original Event Handlers
 	constructor(props) {
 		super(props);
@@ -164,7 +174,7 @@ export class Screen extends Component {
 		for(let i = 0; i < this.length; ++ i) {
 			numbers.push(
 				<div key={ "number-" + i } className="item">
-					<div className="number" ref={ "number-" + i }>{ (i + 1) }</div>
+					<div className="number" onClick={ this.jumpTo.bind(this, i) } ref={ "number-" + i }>{ (i + 1) }</div>
 				</div>
 			);
 		}

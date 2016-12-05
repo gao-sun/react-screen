@@ -114,6 +114,10 @@
 			&.active {
 				color: #777;
 			}
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 
