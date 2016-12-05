@@ -20,7 +20,7 @@
 
 .react-screen-skip {
 	position: fixed;
-	z-index: 99998;
+	z-index: 99999;
 	bottom: 20px;
 	right: 10px;
 	transform: translateX(-50%);
@@ -59,6 +59,7 @@
 		animation-duration: .5s;
 		animation-timing-function: ease-out;
 		animation-fill-mode: forwards;
+		z-index: 99999;
 
 		.image-main,
 		.description {
@@ -97,7 +98,7 @@
 	top: 50%;
 	width: 2px;
 	transform: translateY(-50%);
-	z-index: 99998;
+	z-index: 99999;
 	
 	.item {
 		position: relative;
