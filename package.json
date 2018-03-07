@@ -1,6 +1,6 @@
 {
   "name": "react-screen",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A different React carousel component.",
   "main": "dist/react-screen.js",
   "scripts": {
@@ -33,11 +33,9 @@
     "gulp-clean-css": "^2.0.13",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
+    "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
-  },
-  "dependencies": {
-    "react": "^15.3.2"
   }
 }
